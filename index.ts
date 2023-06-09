@@ -1,7 +1,9 @@
-import * as Express from "express";
-const app: Express.Application = Express();
+import Cors = require("cors");
+import Express = require("express");
+export const app: Express.Application = Express();
 
 app.use(Express.json());
+app.use(Cors());
 
 enum HttpStatus {
     BAD_REQUEST = 400,
@@ -98,3 +100,5 @@ app.post("/register", (req: Express.Request, res: Express.Response) => {
 });
 
 app.listen(3000);
+
+module.exports = { app };

@@ -1,11 +1,17 @@
 {
     "compilerOptions": {
         "target": "ES6",
+        "sourceMap": true,
+        "type": "module",
         "module": "commonjs",
+        "moduleResolution": "node",
         "removeComments": true,
-        "baseUrl": "types",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
         "typeRoots": "types",
-        "types": ["node", "express"]
+        "lib": ["esnext"],
+        "types": ["node", "express", "jest"]
     },
-    "files": ["./index.ts"]
+    "files": ["./index.ts", "./login.spec.ts"],
+    "exclude": ["**/*.spec.ts"]
 }
