@@ -28,3 +28,10 @@ Returns
 404 => Not found error
 500 => Server error
 ```
+
+#### Users
+
+```Rust
+{ "username": jankowalski, "123" }
+{ "username": antoniukwitold, "abc" }
+```
