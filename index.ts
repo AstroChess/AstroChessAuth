@@ -4,10 +4,15 @@ const app: Express.Application = Express();
 app.use(Express.json());
 
 interface User {
-    firstname?: string,
-    lastname?: string,
+    firstname: string,
+    lastname: string,
     username: string,
-    email?: string,
+    email: string,
+    password: string
+};
+
+interface UserLoginBody {
+    username: string,
     password: string
 };
 
@@ -22,7 +27,7 @@ interface Status {
 };
 
 app.post("/login", (req: Express.Request, res: Express.Response) => {
-    const body: User = {
+    const body: UserLoginBody = {
         username: req.body.username,
         password: req.body.password,
     };
