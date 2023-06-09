@@ -4,13 +4,16 @@ const app: Express.Application = Express();
 app.use(Express.json());
 
 interface User {
+    firstname?: string,
+    lastname?: string,
     username: string,
+    email?: string,
     password: string
 };
 
 const USERS: User[] = [
-    { username: "jankowalski", password: "123" },
-    { username: "antoniukwitold", password: "abc" }
+    { firstname: "Jan", lastname: "Kowalski", username: "jankowalski", email: "kowalskijan@interia.com", password: "123" },
+    { firstname: "Witold", lastname: "Antoniuk", username: "antoniukwitold", email: "antoniukwitold@wp.pl", password: "abc" }
 ];
 
 interface Status {
@@ -21,7 +24,7 @@ interface Status {
 app.post("/login", (req: Express.Request, res: Express.Response) => {
     const body: User = {
         username: req.body.username,
-        password: req.body.password
+        password: req.body.password,
     };
 
     let status: Status;
