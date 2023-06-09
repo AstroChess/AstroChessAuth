@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs",
+        "removeComments": true,
+        "baseUrl": "types",
+        "typeRoots": "types",
+        "types": ["node", "express"]
+    },
+    "files": ["./index.ts"]
+}
