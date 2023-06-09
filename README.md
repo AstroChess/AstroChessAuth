@@ -19,3 +19,12 @@ POST /login
 Returns
 { "status": http_status_code, "message": message_from_api }
 ```
+
+#### StatusCodes
+
+```Rust
+200 => Successful operation
+400 => Bad request error
+404 => Not found error
+500 => Server error
+```
