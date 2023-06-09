@@ -48,6 +48,6 @@ Returns
 #### Users
 
 ```Rust
-{ "username": jankowalski, "123" }
-{ "username": antoniukwitold, "abc" }
+{ "username": jankowalski, "password": "123" }
+{ "username": antoniukwitold, "password": "abc" }
 ```
